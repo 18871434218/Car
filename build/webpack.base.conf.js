@@ -9,7 +9,6 @@ function resolve (dir) {
 }
 
 
-
 module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
@@ -64,7 +63,27 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
-      }
+      },
+      
+      /* {
+        test: /\.css$/,
+        include: [
+         /src/,
+         '/node_modules/mint-ui/lib/'       //增加此项
+        ],
+        loader: "style!css"
+       }, */
+    
+
+      /* {
+        test: /\.css$/,
+        include: [
+          /src/,
+          'node_modules/mint-ui/lib/'                       // 这里引入mint-ui 的css
+        ],
+        loader: 'style!css'
+      },  */
+
     ]
   },
   node: {

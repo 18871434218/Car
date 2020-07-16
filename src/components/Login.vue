@@ -20,5 +20,6 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
+/* @import "https://unpkg.com/mint-ui/lib/style.css"; */
 </style>
