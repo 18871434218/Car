@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import Login from '@/components/Login'
 import Home from '@/components/Home'
 
 Vue.use(Router)
@@ -8,14 +8,18 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld,
-      children: [{
-        path:'/Home',
-        name: Home,
-        component: Home,
-      }]
+      path: '/Login',
+      name: 'Login',
+      component: Login,
+    },
+    {
+      path:'/Home',
+      name:'Home',
+      component: Home
+    },
+    {  //首次进入页面/需要重定向
+      path: '/',            
+      redirect: '/Login' 
     }
   ]
 })
